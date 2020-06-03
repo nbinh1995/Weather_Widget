@@ -56,15 +56,14 @@ function httpRequestAsync(url, callback)
 function getDay(){
 let mydate=new Date();
 let year=mydate.getFullYear();
-// if(year<1000) year+=1900;
   let day=mydate.getDay();
   let month=mydate.getMonth();
   let daym=mydate.getDate();
 if(daym<10)
   daym="0"+daym
-  let dayarray=new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday")
-  let montharray=new Array("January","February","March","April","May","June","July","August","September","October","November","December")
-  Day.innerHTML=""+dayarray[day]+", "+montharray[month]+" "+daym+", "+year+"";
+  let dayarray=new Array("Chủ Nhật","Thứ Hai","Thứ Ba","Thứ Tư","Thứ Năm","Thứ Sáu","Thứ Bảy")
+  let montharray=new Array("1","2","3","4","5","6","7","8","9","10","11","12")
+  Day.innerHTML=""+dayarray[day]+", ngày "+daym+" tháng "+montharray[month]+" năm "+year+"";
 }
   
 function startTime() {
@@ -83,3 +82,5 @@ function checkTime(i) {
 }
 startTime();
 getDay();
+//----------------------------------------------------
+
