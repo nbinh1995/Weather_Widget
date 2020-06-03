@@ -33,6 +33,8 @@ function findWeatherDetails() {
 
 function theResponse(response) {
   let jsonObject = JSON.parse(response);
+  let weather = jsonObject.weather[0].main;
+  if(weather == 'Rain') document.body.style.backgroundImage = "url('../images/rain.jpg')";
   NameCity.innerHTML = jsonObject.name+' , '+jsonObject.sys.country;
   NameWeather.innerHTML=jsonObject.weather[0].description;
   IconWeather.src = "http://openweathermap.org/img/wn/" + jsonObject.weather[0].icon + ".png";
