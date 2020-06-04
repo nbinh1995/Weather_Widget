@@ -55,9 +55,10 @@ text-align: center;
 .main-top-bot{
 display: flex;
 flex-direction: column;
-align-items: center; 
+align-items: center;
 }
-#bg-top-bot{
+#js-bg-top-bot{
+display: none; 
 width: 55%;
 border: 1px solid hsl(249, 10%, 26%);
 }
@@ -114,7 +115,7 @@ padding: 1rem 0;
 }
 #js-local-time{
 position: absolute;
-font-size: 2.4vw;
+font-size: 2.5vw;
 color: #4bba9f;
 font-weight: 600;
 right: 1vw;
@@ -122,7 +123,7 @@ bottom: 2vw;
 }
 #js-local-day{
 position: absolute;
-font-size: 1.3vw;
+font-size: 1.5vw;
 color: #fff;
 right: 1vw;
 bottom: 0;

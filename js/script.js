@@ -4,7 +4,8 @@ const NameCity = document.getElementById('js-city-name'),
       Temperature = document.getElementById('js-temperature'),
       Humidity = document.getElementById('js-humidity'),
       Cloud = document.getElementById('js-cloud'),
-      Wind = document.getElementById('js-wind');
+      Wind = document.getElementById('js-wind'),
+      Display = document.getElementById('js-bg-top-bot');
 const AppKey = "8a37a667a679dedffbe96e33485defb5",
       SearchButton = document.getElementById("js-search-btn"),
       SearchInput = document.getElementById("js-search-txt");
@@ -26,7 +27,7 @@ function findWeatherDetails() {
   
   }else {
     let searchLink = "https://api.openweathermap.org/data/2.5/weather?q=" + SearchInput.value + 
-                      "&lang=vi&units=metric&appid="+ AppKey;
+                      "&units=metric&appid="+ AppKey;
    httpRequestAsync(searchLink, theResponse);
   }
  }
@@ -42,6 +43,7 @@ function theResponse(response) {
   Humidity.innerHTML = jsonObject.main.humidity;
   Cloud.innerHTML = jsonObject.clouds.all;
   Wind.innerHTML =  jsonObject.wind.speed;
+  Display.style.display = 'block';
 }
 
 function httpRequestAsync(url, callback)
@@ -63,9 +65,9 @@ let year=mydate.getFullYear();
   let daym=mydate.getDate();
 if(daym<10)
   daym="0"+daym
-  let dayarray=new Array("Chủ Nhật","Thứ Hai","Thứ Ba","Thứ Tư","Thứ Năm","Thứ Sáu","Thứ Bảy")
-  let montharray=new Array("1","2","3","4","5","6","7","8","9","10","11","12")
-  Day.innerHTML=""+dayarray[day]+", ngày "+daym+" tháng "+montharray[month]+" năm "+year+"";
+  let dayarray=new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday")
+	let montharray=new Array("January","February","March","April","May","June","July","August","September","October","November","December")
+  Day.innerHTML=""+dayarray[day]+", "+montharray[month]+" "+daym+", "+year+"";
 }
   
 function startTime() {
