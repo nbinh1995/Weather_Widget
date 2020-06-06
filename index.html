@@ -27,7 +27,7 @@
                 <h2 id="js-city-name"></h2>
                 <p id="js-weather-name"></p>
                 <h3>NOW</h3>
-                <h4><span id="js-temperature"></span><sup>°c</sup></h4>
+                <h4><span id="js-temperature"></span><i>°c</i></h4>
                 </div>
                 <div class="w-main-top-right">
                     <img src="" alt="" id="js-icon-weather">
@@ -36,31 +36,94 @@
                 </div>
             </div>
             <div class="w-main-bot">
-                <div class="bot-item">
-                    <div class="item">
-                        <h3>Humidity: </h3>
-                        <p><span id="js-humidity"></span> <span>%</span></p>
+                <div class="w-main-bot-left">
+                    <div class="bot-item">
+                        <div class="item">
+                            <h3>Humidity: </h3>
+                            <p><span id="js-humidity"></span> <span>%</span></p>
+                        </div>
+                        <div class="icon">
+                            <canvas id="rain" ></canvas>
+                        </div>
                     </div>
-                    <div class="icon">
-                        <canvas id="rain" ></canvas>
+                    <div class="bot-item">
+                        <div class="item">
+                            <h3>Cloud: </h3>
+                            <p><span id="js-cloud"></span> <span>%</span></p>
+                        </div>
+                        <div class="icon">
+                            <canvas id="cloudy" ></canvas>
+                        </div>
+                    </div>
+                    <div class="bot-item">
+                        <div class="item">
+                            <h3>Wind: </h3>
+                            <p><span id="js-wind"></span> <span>m/s</span></p>
+                        </div>
+                        <div class="icon">
+                            <canvas id="wind" ></canvas>
+                        </div>
                     </div>
                 </div>
-                <div class="bot-item">
-                    <div class="item">
-                        <h3>Cloud: </h3>
-                        <p><span id="js-cloud"></span> <span>%</span></p>
+                <div class="w-main-bot-right">
+                    <div class="tab">
+                        <div class="bot-day" onclick=" openTab('js-forecast-two')"><div id='js-day-two'></div></div>
+                        <div class="bot-day" onclick=" openTab('js-forecast-three')"><div id='js-day-three'></div></div>
+                        <div class="bot-day" onclick=" openTab('js-forecast-four')"><div id='js-day-four'></div></div>
                     </div>
-                    <div class="icon">
-                        <canvas id="cloudy" ></canvas>
+                    <div id="js-forecast-two" class="day">
+                        <div class="bot-hour">
+                            <h3>6h AM</h3>
+                             <h4><p><span class="js-temp-6h"></span><i>°c</i></p><span class="js-main-6h"></span></h4>
+                        </div>
+                        <div class="bot-hour">
+                            <h3>12h AM</h3>
+                            <h4><p><span class="js-temp-12h"></span><i>°c</i></p><span class="js-main-12h"></span></h4>
+                        </div>
+                        <div class="bot-hour">
+                            <h3>18h PM</h3>
+                            <h4><p><span class="js-temp-18h"></span><i>°c</i></p><span class="js-main-18h"></span></h4>
+                        </div>
+                        <div class="bot-hour">
+                            <h3>21h PM</h3>
+                            <h4><p><span class="js-temp-21h"></span><i>°c</i></p><span class="js-main-21h"></span></h4>
+                        </div>
                     </div>
-                </div>
-                <div class="bot-item">
-                    <div class="item">
-                        <h3>Wind: </h3>
-                        <p><span id="js-wind"></span> <span>m/s</span></p>
+                    <div id="js-forecast-three" class="day">
+                        <div class="bot-hour">
+                            <h3>6h AM</h3>
+                             <h4><p><span class="js-temp-6h"></span><i>°c</i></p><span class="js-main-6h"></span></h4>
+                        </div>
+                        <div class="bot-hour">
+                            <h3>12h AM</h3>
+                            <h4><p><span class="js-temp-12h"></span><i>°c</i></p><span class="js-main-12h"></span></h4>
+                        </div>
+                        <div class="bot-hour">
+                            <h3>18h PM</h3>
+                            <h4><p><span class="js-temp-18h"></span><i>°c</i></p><span class="js-main-18h"></span></h4>
+                        </div>
+                        <div class="bot-hour">
+                            <h3>21h PM</h3>
+                            <h4><p><span class="js-temp-21h"></span><i>°c</i></p><span class="js-main-21h"></span></h4>
+                        </div>
                     </div>
-                    <div class="icon">
-                        <canvas id="wind" ></canvas>
+                    <div id="js-forecast-four" class="day">
+                        <div class="bot-hour">
+                            <h3>6h AM</h3>
+                             <h4><p><span class="js-temp-6h"></span><i>°c</i></p><span class="js-main-6h"></span></h4>
+                        </div>
+                        <div class="bot-hour">
+                            <h3>12h AM</h3>
+                            <h4><p><span class="js-temp-12h"></span><i>°c</i></p><span class="js-main-12h"></span></h4>
+                        </div>
+                        <div class="bot-hour">
+                            <h3>18h PM</h3>
+                            <h4><p><span class="js-temp-18h"></span><i>°c</i></p><span class="js-main-18h"></span></h4>
+                        </div>
+                        <div class="bot-hour">
+                            <h3>21h PM</h3>
+                            <h4><p><span class="js-temp-21h"></span><i>°c</i></p><span class="js-main-21h"></span></h4>
+                        </div>
                     </div>
                 </div>
             </div>

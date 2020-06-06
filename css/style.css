@@ -55,10 +55,10 @@ text-align: center;
 .main-top-bot{
 display: flex;
 flex-direction: column;
-align-items: center;
+align-items: center; 
 }
 #js-bg-top-bot{
-display: none; 
+display: none;
 width: 55%;
 border: 1px solid hsl(249, 10%, 26%);
 }
@@ -115,7 +115,7 @@ padding: 1rem 0;
 }
 #js-local-time{
 position: absolute;
-font-size: 2.5vw;
+font-size: 2.4vw;
 color: #4bba9f;
 font-weight: 600;
 right: 1vw;
@@ -123,39 +123,85 @@ bottom: 2vw;
 }
 #js-local-day{
 position: absolute;
-font-size: 1.5vw;
+font-size: 1.3vw;
 color: #fff;
 right: 1vw;
 bottom: 0;
 }
-/*bot*/
+/*bot left*/
 .w-main-bot{
-padding: 4vw 2rem;
+    display: flex;
+}
+.w-main-bot-left{
+width: 40%;
+padding: 4vw 2vw;
 background: rgba(95, 252, 204, 0.69);
 }
 .bot-item{
 display: flex;
-justify-content: space-around;
+justify-content: space-between;
 }
 .item{
-display: flex;
 font-weight: 600;
-letter-spacing: 2px;
+letter-spacing: 1px;
 font-size: 1.5vw;
 letter-spacing: 1px;
 }
 .item h3{
 text-transform: uppercase;
 color: #212121;
-padding-right: 2vw;
 }
 .item p{
-font-size: 2vw;
+font-size: 1.5vw;
 color: #1b4e3f;
 }
 .icon canvas{
     width: 9vw;
     height: 4vw;
+}
+/*bot-right*/
+.w-main-bot-right{
+    width: 60%;
+    background: rgba(255, 8, 8, 0.6);
+    padding: 1vw;
+    margin: 0 auto;
+    font-weight: 600;
+}
+.tab{
+    display: inline-flex;
+    width: 100%;
+}
+.bot-day{
+    width: 100%;
+}
+.bot-day div {
+    border-bottom: 2px solid black;
+    font-size: 2vw;
+    cursor: pointer;
+    padding: 0.5vw 1vw;
+    font-weight: 800;
+}
+.bot-day div:active{
+    color: #fff ;
+    border-color: #18e9a7;
+}
+#js-day-two{
+    color: #fff ;
+    border-color: #18e9a7;
+}
+.day{
+    display: none;
+    color: #fff;
+    font-size: 1.2vw;
+    padding: 2vw 7vw;
+}
+#js-forecast-two{
+    display: block;
+}
+.bot-hour{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1vw;
 }
 /*footer*/
 .main-footer{
