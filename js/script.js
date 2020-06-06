@@ -40,7 +40,7 @@ function findWeatherDetails() {
   }else {
     let searchLink = "https://api.openweathermap.org/data/2.5/weather?q=" + SearchInput.value + 
                       "&units=metric&appid="+ AppKey;
-    let searchLink2 = "http://api.openweathermap.org/data/2.5/forecast?q="+ SearchInput.value + 
+    let searchLink2 = "https://api.openweathermap.org/data/2.5/forecast?q="+ SearchInput.value + 
                       "&units=metric&appid="+ AppKey;
     httpRequestAsync(searchLink2, theResponse2);
     httpRequestAsync(searchLink, theResponse);
