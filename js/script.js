@@ -42,15 +42,16 @@ function findWeatherDetails() {
                       "&units=metric&appid="+ AppKey;
     let searchLink2 = "http://api.openweathermap.org/data/2.5/forecast?q="+ SearchInput.value + 
                       "&units=metric&appid="+ AppKey;
-   httpRequestAsync(searchLink, theResponse);
-   httpRequestAsync(searchLink2, theResponse2);
+    httpRequestAsync(searchLink2, theResponse2);
+    httpRequestAsync(searchLink, theResponse);
+   
   }
  }
  
 function theResponse(response) {
   let jsonObject = JSON.parse(response);
-  let weather = jsonObject.weather[0].main;
-  if(weather == 'Rain') document.body.style.backgroundImage = "url('../images/rain.jpg')";
+  // let weather = jsonObject.weather[0].main;
+  // if(weather == 'Rain') document.body.style.backgroundImage = "url('../images/rain.jpg')";
   NameCity.innerHTML = jsonObject.name+' , '+jsonObject.sys.country;
   NameWeather.innerHTML=jsonObject.weather[0].description;
   IconWeather.src = "http://openweathermap.org/img/wn/" + jsonObject.weather[0].icon + ".png";
