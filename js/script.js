@@ -206,8 +206,3 @@ function buttonTab(day){
   }
 }
 //--------------------Notification-------------------------
-console.log(Notification.permission);
-// Getting permission
-//Notification.requestPermission().then(function(result) {
-//   console.log(result);
-// });
