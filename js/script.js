@@ -175,7 +175,6 @@ for (let i=0;i<7;i++){
 nextThreeDay();
 //----------------CSS TAB-----------------
 function openTab(day) {
-  debugger
   let Day = document.getElementsByClassName("day");
   for (let i = 0; i < Day.length; i++) {
     Day[i].style.display = "none";
